@@ -1,270 +1,190 @@
-# APL Perfect
+<div align="center">
 
-**APL Perfect** is a premium construction management system built with the MERN stack. It provides dual-portal access: a full-featured **Admin Dashboard** for managing sites, workers, materials, and approvals, and a **Site Portal** for site incharge to manage day-to-day operations including attendance, material requests, and payment tracking.
+# 🏗️ APL Perfect
 
-The UI features an animated video background, warm bronze/gold luxury theme, glass-morphism cards, and smooth Framer Motion animations for a modern, premium experience.
+### Premium Construction Management System
 
----
+<p>
+Modern MERN Stack application for managing construction sites, workers, materials, attendance, requests and payments.
+</p>
 
-## Features
+![React](https://img.shields.io/badge/React-19-61DAFB?style=for-the-badge&logo=react)
+![Node.js](https://img.shields.io/badge/Node.js-Express-339933?style=for-the-badge&logo=node.js)
+![MongoDB](https://img.shields.io/badge/MongoDB-Database-47A248?style=for-the-badge&logo=mongodb)
+![TailwindCSS](https://img.shields.io/badge/TailwindCSS-4-38BDF8?style=for-the-badge&logo=tailwindcss)
+![JWT](https://img.shields.io/badge/Auth-JWT-orange?style=for-the-badge)
+![License](https://img.shields.io/badge/License-MIT-success?style=for-the-badge)
 
-### Admin Features
-- **Dashboard** — Real-time overview with stats, attendance graphs, request analytics, and latest notifications
-- **Worker Management** — Add, edit, delete, and assign workers to sites with ESI/PF tracking
-- **Material Management** — Manage material catalog with unit pricing and active/inactive status
-- **Site Management** — Create and manage construction sites with budgets, locations, and assigned workers
-- **Request Approval Workflow** — Review and approve/reject requests from site incharges with admin remarks
-- **Attendance History** — View attendance submitted by all sites with present/absent breakdown
-- **Notification Center** — Real-time notifications for all requests with read/unread status, delete, and mark-all-read
-- **Request History** — Complete audit trail of all requests with status tracking
-
-### Site Incharge Features
-- **Site Dashboard** — Personal site stats, today's attendance, pending requests, and recent notifications
-- **Attendance Management** — Submit daily attendance with worker-wise present/absent status
-- **Material Requests** — Submit material requirement requests with quantities and estimated prices
-- **Payment Requests** — Submit payment requests with purpose, amount, and supporting notes
-- **Other Requests** — Submit miscellaneous requests with subject and description
-- **Request History** — Track all submitted requests with approval status and admin remarks
-- **Site Notifications** — Site-specific notifications for request updates
-- **Site Details** — View assigned site information and worker roster
+</div>
 
 ---
 
-## Tech Stack
+# ✨ Overview
 
-| Layer | Technology |
-|-------|-----------|
-| **Frontend** | React 19, Vite 8, Tailwind CSS 4, Framer Motion 12 |
-| **Backend** | Node.js, Express 4, ES Modules |
-| **Database** | MongoDB with Mongoose 8 |
-| **Authentication** | JWT (HTTP-only cookies + Bearer tokens) |
-| **Security** | Helmet, CORS, Rate Limiting, bcryptjs |
-| **Logging** | Winston + Winston MongoDB Transport |
-| **Form Handling** | React Hook Form 7 |
-| **Charts** | Chart.js + React-ChartJS-2 |
-| **Notifications** | React Hot Toast |
+APL Perfect is a **premium Construction Management System** built using the **MERN Stack**.
+
+It provides two complete portals:
+
+- 👨‍💼 **Admin Portal**
+- 👷 **Site Incharge Portal**
+
+The application helps manage construction sites, workers, materials, attendance, approvals, notifications, expenses, and payment workflows through an elegant dashboard.
 
 ---
 
-## Project Structure
+# 🚀 Features
 
-```
-APL Perfect/
-├── frontend/                 # React + Vite client application
-│   ├── src/
-│   │   ├── api/             # Axios API service modules
-│   │   ├── components/      # Reusable UI components
-│   │   ├── constants/       # Route and status constants
-│   │   ├── context/         # React contexts (Auth, Theme, DataRefresh)
-│   │   ├── hooks/           # Custom hooks (useApi)
-│   │   ├── layouts/         # Layout wrappers (Admin, Site, Protected)
-│   │   ├── pages/           # Page components
-│   │   ├── routes/          # React Router configuration
-│   │   ├── services/        # Frontend service layer
-│   │   ├── styles/          # Global styles
-│   │   ├── utils/           # Utility functions
-│   │   ├── index.css        # Tailwind + theme configuration
-│   │   └── main.jsx         # Application entry point
-│   ├── public/              # Static assets (videos, images)
+## 👨‍💼 Admin Panel
+
+- 📊 Dashboard Analytics
+- 👷 Worker Management
+- 🧱 Material Management
+- 🏗️ Site Management
+- ✅ Attendance Approval
+- 💰 Payment Approval
+- 📦 Material Request Approval
+- 🔔 Notification Center
+- 📜 Request History
+- 📈 Charts & Statistics
+
+---
+
+## 👷 Site Incharge Panel
+
+- 📊 Dashboard
+- 📅 Daily Attendance
+- 📦 Material Requests
+- 💰 Payment Requests
+- 📝 Expense Management
+- 🔔 Notifications
+- 📜 Request History
+- 👥 Assigned Workers
+- 🏗️ Site Details
+
+---
+
+# 🛠️ Tech Stack
+
+| Frontend | Backend | Database | Authentication |
+|-----------|----------|-----------|---------------|
+| React 19 | Node.js | MongoDB | JWT |
+| Vite | Express | Mongoose | Cookies |
+| Tailwind CSS | REST API | | |
+
+---
+
+# 📂 Project Structure
+
+```text
+APL Perfect
+│
+├── frontend
+│   ├── src
+│   ├── public
 │   └── package.json
-├── backend/                  # Express + MongoDB server
-│   ├── src/
-│   │   ├── config/          # Database configuration
-│   │   ├── controllers/     # Request handlers
-│   │   ├── middleware/      # Auth, security, error handling
-│   │   ├── models/          # Mongoose schemas
-│   │   ├── routes/          # API route definitions
-│   │   ├── services/        # Business logic layer
-│   │   ├── utils/           # Helpers (ApiError, ApiResponse, logger)
-│   │   ├── validations/     # Request validation schemas
-│   │   ├── app.js           # Express app configuration
-│   │   └── server.js        # Server entry point
+│
+├── backend
+│   ├── src
+│   ├── uploads
 │   └── package.json
-├── .gitignore
-└── README.md
+│
+├── README.md
+└── .gitignore
 ```
 
 ---
 
-## Installation
+# ⚙️ Installation
 
-### Prerequisites
-- Node.js >= 18.x
-- MongoDB >= 6.x
-- npm or yarn
-
-### Clone Repository
 ```bash
-git clone <repository-url>
-cd APL\ Perfect
-```
+git clone https://github.com/yourusername/APL-Perfect.git
 
-### Install Dependencies
-```bash
-# Install backend dependencies
+cd APL-Perfect
+
 cd backend
 npm install
 
-# Install frontend dependencies
 cd ../frontend
 npm install
 ```
 
 ---
 
-## Environment Variables
+# ▶️ Run
 
-### Backend (`.env`)
-```env
-PORT=5000
-MONGODB_URI=mongodb://localhost:27017/aplperfect
-JWT_SECRET=your_jwt_secret_key_here
-JWT_EXPIRES=24h
-NODE_ENV=development
-CLIENT_URL=http://localhost:5173
-```
+### Backend
 
-### Frontend (`.env`)
-```env
-VITE_API_URL=http://localhost:5000/api
-```
-
----
-
-## Running the Application
-
-### Development Mode
-
-**Backend:**
 ```bash
 cd backend
 npm run dev
 ```
-Server runs at `http://localhost:5000`
 
-**Frontend:**
+Runs on
+
+```
+http://localhost:5000
+```
+
+---
+
+### Frontend
+
 ```bash
 cd frontend
 npm run dev
 ```
-Client runs at `http://localhost:5173`
 
-### Production Mode
-```bash
-# Backend
-cd backend
-npm start
+Runs on
 
-# Frontend
-cd frontend
-npm run build
-npm run preview
+```
+http://localhost:5173
 ```
 
 ---
 
-## Authentication
+# 🔐 Authentication
 
-The application supports two authentication flows:
+✔ Admin Login
 
-| Portal | Routes | Context | Storage |
-|--------|--------|---------|---------|
-| **Admin** | `/auth/login` | `AuthContext` | `localStorage` |
-| **Site Incharge** | `/auth/site-login` | `SiteAuthContext` | `localStorage` |
+✔ Site Incharge Login
 
-- Admin credentials are validated against the `Admin` collection
-- Site credentials are validated against the `Site` collection
-- Both use JWT tokens with HTTP-only cookie support
-- Protected routes use `ProtectedRoute` (admin) and `SiteProtectedRoute` (site) wrappers
-- Rate limiting is applied on login endpoints (10 attempts per 15 minutes)
+✔ JWT Authentication
+
+✔ Protected Routes
+
+✔ Role Based Access
 
 ---
 
-## API Overview
+# 📸 Screenshots
 
-### Admin APIs
-| Method | Endpoint | Description |
-|--------|----------|-------------|
-| `POST` | `/api/auth/login` | Admin login |
-| `POST` | `/api/auth/logout` | Admin logout |
-| `GET` | `/api/dashboard` | Admin dashboard stats |
-| `GET` | `/api/workers` | List workers |
-| `POST` | `/api/workers/add` | Create worker |
-| `PUT` | `/api/workers/:id` | Update worker |
-| `DELETE` | `/api/workers/:id` | Delete worker |
-| `GET` | `/api/materials` | List materials |
-| `POST` | `/api/materials/add` | Create material |
-| `PUT` | `/api/materials/:id` | Update material |
-| `DELETE` | `/api/materials/:id` | Delete material |
-| `GET` | `/api/sites` | List sites |
-| `POST` | `/api/sites` | Create site |
-| `PUT` | `/api/sites/:id` | Update site |
-| `DELETE` | `/api/sites/:id` | Delete site |
-| `GET` | `/api/attendance` | List attendance records |
-| `GET` | `/api/attendance/:id` | Get attendance detail |
-| `GET` | `/api/payment-request` | List payment requests |
-| `PATCH` | `/api/payment-request/:id/approve` | Approve payment request |
-| `PATCH` | `/api/payment-request/:id/reject` | Reject payment request |
-| `GET` | `/api/material-request` | List material requests |
-| `PATCH` | `/api/material-request/:id/approve` | Approve material request |
-| `PATCH` | `/api/material-request/:id/reject` | Reject material request |
-| `GET` | `/api/other-request` | List other requests |
-| `PATCH` | `/api/other-request/:id/approve` | Approve other request |
-| `PATCH` | `/api/other-request/:id/reject` | Reject other request |
-| `GET` | `/api/notifications` | List notifications |
-| `PATCH` | `/api/notifications/:id/read` | Mark notification as read |
-| `PATCH` | `/api/notifications/read-all` | Mark all as read |
-| `DELETE` | `/api/notifications/:id` | Delete notification |
-| `DELETE` | `/api/notifications` | Delete all notifications |
-| `GET` | `/api/attendance-history` | Attendance history across sites |
+> Add screenshots here
 
-### Site APIs
-| Method | Endpoint | Description |
-|--------|----------|-------------|
-| `POST` | `/api/site/auth/login` | Site login |
-| `POST` | `/api/site/auth/logout` | Site logout |
-| `GET` | `/api/site/dashboard` | Site dashboard stats |
-| `GET` | `/api/site/details` | Site details |
-| `GET` | `/api/site/assigned-workers` | Assigned workers list |
-| `GET` | `/api/site/materials` | Available materials |
-| `POST` | `/api/site/attendance` | Submit attendance |
-| `GET` | `/api/site/attendance/history` | Attendance history |
-| `POST` | `/api/site/payment-request` | Submit payment request |
-| `GET` | `/api/site/payment-request/history` | Payment request history |
-| `POST` | `/api/site/material-request` | Submit material request |
-| `GET` | `/api/site/material-request/history` | Material request history |
-| `POST` | `/api/site/other-request` | Submit other request |
-| `GET` | `/api/site/other-request/history` | Other request history |
-| `GET` | `/api/site/notifications` | Site notifications |
-| `PATCH` | `/api/site/notifications/:id/read` | Mark site notification as read |
-| `DELETE` | `/api/site/notifications/:id` | Delete site notification |
+| Login | Dashboard |
+|--------|-----------|
+| Image | Image |
 
 ---
 
-## Screenshots
+# 🔮 Future Scope
 
-> Screenshots will be added here.
-
----
-
-## Future Improvements
-
-- Multi-site admin dashboard with comparison analytics
-- Advanced reporting with PDF/Excel export
-- Push notifications for mobile devices
-- SMS/Email alerts for approval status changes
-- Advanced role-based access control (RBAC)
-- Real-time collaboration features
-- Mobile app (React Native)
+- 📱 Mobile App
+- 📊 Advanced Analytics
+- 📄 PDF Reports
+- 📧 Email Notifications
+- 🔔 Push Notifications
+- 📈 AI Reports
 
 ---
 
-## License
+# 👨‍💻 Author
 
-This project is licensed under the MIT License.
+**Manas Kadam**
+
+Built using ❤️ with the MERN Stack.
 
 ---
 
-## Author
+# ⭐ Support
 
-APL Perfect — Construction Management System
+If you like this project, consider giving it a ⭐ on GitHub.
