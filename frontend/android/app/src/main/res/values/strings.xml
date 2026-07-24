@@ -1,0 +1,7 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+    <string name="app_name">APL Perfect</string>
+    <string name="title_activity_main">APL Perfect</string>
+    <string name="package_name">com.aplperfect.app</string>
+    <string name="custom_url_scheme">com.aplperfect.app</string>
+</resources>
